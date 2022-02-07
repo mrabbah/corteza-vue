@@ -69,6 +69,12 @@
           </li>
         </ul>
       </div>
+
+      <div>
+        <h3>
+          Actions
+        </h3>
+      </div>
     </div>
   </div>
 </template>
