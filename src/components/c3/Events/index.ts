@@ -11,6 +11,17 @@ interface Props {
   [_: string]: unknown;
 }
 
+interface Events {
+  type: string;
+  target: string;
+  // values: {};
+}
+
+interface Control extends Handler {
+  props?: Props;
+  events?: Events;
+}
+
 interface Control extends Handler {
   props?: Props;
 }
