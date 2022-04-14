@@ -28,11 +28,11 @@
     </main>
 
     <div
-      class="controls px-5 py-2 mt-2"
+      class="d-flex justify-content-between my-3"
       v-if="current"
     >
       <div
-        class="control-group mr-2"
+        class=""
         v-for="(cg, g) in controlGroups"
         :key="`control-group-${g}`"
       >
@@ -51,7 +51,7 @@
 
       <div
         v-if="current.scenarios"
-        class="control-group float-right"
+        class=""
       >
         <h3>
           Pre-set controls
@@ -70,22 +70,47 @@
         </ul>
       </div>
 
-      <div>
-        <h3>
+      <!-- <div
+        v-if="false"
+      >
+        <h3
+          class="mr-3"
+        >
           Actions
         </h3>
+        <ul
+          class="pl-0"
+        >
+          <li
+            v-for="(e, i) in current.events"
+            :key="i"
+            class="list-unstyled scenario"
+          >
+            {{ e }}
+          </li>
+        </ul>
+      </div> -->
+      <div>
+        <h3
+          class="mr-3"
+        >
+          Actions
+        </h3>
+        <c3-click></c3-click>
       </div>
     </div>
   </div>
 </template>
 <script>
 import ComponentList from './ComponentList.vue'
+import C3Click from './Events/C3Click.vue'
 
 export default {
   name: 'C3',
 
   components: {
     ComponentList,
+    C3Click,
   },
 
   props: {
